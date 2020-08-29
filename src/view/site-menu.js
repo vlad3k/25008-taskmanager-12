@@ -1,10 +1,6 @@
-import {createElement} from "../utils";
+import AbstractView from "./abstract";
 
-export default class SiteMenu {
-  constructor() {
-    this._element = null;
-  }
-
+export default class SiteMenu extends AbstractView {
   _getTemplate() {
     return `<section class="control__btn-wrap">
       <input
@@ -34,17 +30,5 @@ export default class SiteMenu {
         >STATISTICS</label
       >
      </section>`;
-  }
-
-  getElement() {
-    if (!this._element) {
-      this._element = createElement(this._getTemplate());
-    }
-
-    return this._element;
-  }
-
-  removeElement() {
-    this._element = null;
   }
 }
