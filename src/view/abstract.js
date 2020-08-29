@@ -1,5 +1,4 @@
-
-import {createElement} from "../utils.js";
+import {createElement} from "../utils/render";
 
 export default class Abstract {
   constructor() {
@@ -8,6 +7,7 @@ export default class Abstract {
     }
 
     this._element = null;
+    this._callback = {};
   }
 
   _getTemplate() {
