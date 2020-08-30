@@ -7,7 +7,7 @@ import {render} from "./utils/render";
 
 const TASK_COUNT = 22;
 
-const tasks = new Array(TASK_COUNT).fill().map(generateTask);
+const tasks = Array.from({length: TASK_COUNT}, generateTask);
 const filters = generateFilter(tasks);
 
 const siteMainElement = document.querySelector(`.main`);
