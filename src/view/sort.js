@@ -1,5 +1,5 @@
 import AbstractView from "./abstract";
-import {SortType} from "../const"
+import {SortType} from "../const";
 
 export default class Sort extends AbstractView {
   constructor() {
