@@ -210,9 +210,9 @@ export default class TaskEdit extends SmartView {
     evt.preventDefault();
     this.updateData({
       repeating: Object.assign(
-        {},
-        this._data.repeating,
-        {[evt.target.value]: evt.target.checked}
+          {},
+          this._data.repeating,
+          {[evt.target.value]: evt.target.checked}
       )
     });
   }
@@ -236,12 +236,12 @@ export default class TaskEdit extends SmartView {
 
   static parseTaskToData(task) {
     return Object.assign(
-      {},
-      task,
-      {
-        isDueDate: task.dueDate !== null,
-        isRepeating: isTaskRepeating(task.repeating)
-      }
+        {},
+        task,
+        {
+          isDueDate: task.dueDate !== null,
+          isRepeating: isTaskRepeating(task.repeating)
+        }
     );
   }
 
